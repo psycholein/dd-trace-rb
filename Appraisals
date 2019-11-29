@@ -900,7 +900,7 @@ elsif Gem::Version.new('2.7.0') <= Gem::Version.new(RUBY_VERSION)
       gem 'ethon'
       gem 'excon'
       gem 'grape'
-      gem 'graphql'
+      # gem 'graphql' # Awaiting support for 2.7
       # gem 'grpc' # Awaiting support for 2.7
       gem 'hiredis'
       gem 'mongo', '>= 2.8.0'

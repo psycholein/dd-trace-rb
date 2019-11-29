@@ -657,7 +657,7 @@ task :ci do
       sh 'bundle exec appraisal contrib rake spec:elasticsearch'
       sh 'bundle exec appraisal contrib rake spec:excon'
       sh 'bundle exec appraisal contrib rake spec:faraday'
-      sh 'bundle exec appraisal contrib rake spec:graphql'
+      # sh 'bundle exec appraisal contrib rake spec:graphql' # Awaiting support for 2.7
       # sh 'bundle exec appraisal contrib rake spec:grpc' # Awaiting support for 2.7
       sh 'bundle exec appraisal contrib rake spec:http'
       sh 'bundle exec appraisal contrib rake spec:mongodb'
