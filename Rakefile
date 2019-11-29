@@ -565,7 +565,8 @@ task :ci do
       sh 'bundle exec appraisal rails6-mysql2 rake spec:rails'
       sh 'bundle exec appraisal rails6-postgres rake spec:rails'
     end
-  elsif Gem::Version.new('2.6.0') <= Gem::Version.new(RUBY_VERSION)
+  elsif Gem::Version.new('2.6.0') <= Gem::Version.new(RUBY_VERSION) \
+      && Gem::Version.new(RUBY_VERSION) < Gem::Version.new('2.7.0')
     # Main library
     sh 'bundle exec rake test:main'
     sh 'bundle exec rake spec:main'

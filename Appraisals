@@ -702,7 +702,8 @@ elsif Gem::Version.new('2.5.0') <= Gem::Version.new(RUBY_VERSION) \
       gem 'typhoeus'
     end
   end
-elsif Gem::Version.new('2.6.0') <= Gem::Version.new(RUBY_VERSION)
+elsif Gem::Version.new('2.6.0') <= Gem::Version.new(RUBY_VERSION) \
+      && Gem::Version.new(RUBY_VERSION) < Gem::Version.new('2.7.0')
   if RUBY_PLATFORM != 'java'
     appraise 'rails5-mysql2' do
       gem 'rails', '~> 5.2.1'
